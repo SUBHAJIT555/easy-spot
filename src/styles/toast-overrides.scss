@@ -1,0 +1,104 @@
+// Site toast styles — uses theme CSS variables from SCSS :root
+
+.qpm-toast,
+.scs-toast,
+.es-toast {
+  --toastify-toast-width: 360px;
+  --toastify-toast-top: 1.25rem;
+  --toastify-toast-right: 1.25rem;
+  --toastify-color-success: var(--tp-theme-secondary);
+  --toastify-color-error: #DC2626;
+  --toastify-color-light: var(--tp-common-white);
+  --toastify-text-color-light: var(--tp-common-black);
+  --toastify-color-progress-success: var(--tp-theme-secondary);
+  --toastify-color-progress-error: #DC2626;
+  padding: 0;
+}
+
+.qpm-toast .Toastify__toast-container,
+.scs-toast .Toastify__toast-container,
+.es-toast .Toastify__toast-container {
+  width: var(--toastify-toast-width);
+}
+
+.qpm-toast .Toastify__toast,
+.scs-toast .Toastify__toast,
+.es-toast .Toastify__toast {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(24, 24, 27, 0.08);
+  border: 1px solid var(--tp-border-primary);
+  padding: 14px 16px;
+  min-height: 56px;
+}
+
+.qpm-toast .Toastify__toast--success,
+.scs-toast .Toastify__toast--success,
+.es-toast .Toastify__toast--success {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+
+.qpm-toast .Toastify__toast--error,
+.scs-toast .Toastify__toast--error,
+.es-toast .Toastify__toast--error {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+
+.qpm-toast .Toastify__toast-icon,
+.scs-toast .Toastify__toast-icon,
+.es-toast .Toastify__toast-icon {
+  width: 28px;
+  margin-inline-end: 12px;
+}
+
+.qpm-toast .Toastify__toast--success .Toastify__toast-icon,
+.scs-toast .Toastify__toast--success .Toastify__toast-icon,
+.es-toast .Toastify__toast--success .Toastify__toast-icon {
+  color: var(--toastify-color-success);
+}
+
+.qpm-toast .Toastify__toast--error .Toastify__toast-icon,
+.scs-toast .Toastify__toast--error .Toastify__toast-icon,
+.es-toast .Toastify__toast--error .Toastify__toast-icon {
+  color: var(--toastify-color-error);
+}
+
+.qpm-toast-body,
+.scs-toast-body,
+.es-toast-body {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 0;
+}
+
+.qpm-toast .Toastify__close-button,
+.scs-toast .Toastify__close-button,
+.es-toast .Toastify__close-button {
+  color: var(--tp-text-1);
+  opacity: 1;
+  align-self: center;
+}
+
+.qpm-toast .Toastify__close-button:hover,
+.scs-toast .Toastify__close-button:hover,
+.es-toast .Toastify__close-button:hover {
+  color: var(--tp-common-black);
+}
+
+.qpm-toast .Toastify__progress-bar,
+.scs-toast .Toastify__progress-bar,
+.es-toast .Toastify__progress-bar {
+  height: 3px;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.qpm-toast .Toastify__toast::before,
+.qpm-toast .Toastify__toast::after,
+.scs-toast .Toastify__toast::before,
+.scs-toast .Toastify__toast::after,
+.es-toast .Toastify__toast::before,
+.es-toast .Toastify__toast::after {
+  display: none !important;
+}

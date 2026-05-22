@@ -1,0 +1,99 @@
+// Smart Choice Store — SCSS theme (keep in sync with src/theme/sites/smart-choice-store.js)
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+
+$font-family: (
+    'ff': (
+        'body': "var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        'heading': "var(--font-geist-sans), var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        'p': "var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        'jost': "var(--font-inter), sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+        'roboto': "var(--font-inter), sans-serif",
+        'oregano': "var(--font-geist-sans), sans-serif",
+        'charm': "var(--font-geist-sans), sans-serif",
+    )
+);
+
+$font-size: (
+    'fz': (
+        'body': 15px,
+        'p': 15px,
+    )
+);
+
+$colors: (
+    'common': (
+        'white': #FFFFFF,
+        'black-solid': #042F2E,
+        'black': #0C4A6E,
+    ),
+    'yellow': (
+        '1': #FBBF24,
+        '2': #FDE68A,
+        '3': #D97706,
+    ),
+    'pink': (
+        '1': #BE123C,
+        '2': #9F1239,
+        '3': #E11D48,
+        '4': #FB7185,
+    ),
+    'green': (
+        'dark': #0F766E,
+        '1': #14B8A6,
+    ),
+    'khaki': (
+        '1': #CA8A04,
+    ),
+    'blue': (
+        '1': #0E7490,
+    ),
+    'orange': (
+        '1': #BE123C,
+    ),
+    'heading': (
+        'primary': #134E4A,
+        'secondary': #0E7490,
+    ),
+    'grey': (
+        '1': #F0FDFA,
+        '2': #ECFEFF,
+        '3': #E2E8F0,
+        '4': #E2E8F0,
+        '5': #CBD5E1,
+        '6': #E2E8F0,
+        '7': #F0FDFA,
+        '8': #CBD5E1,
+        '9': #CCFBF1,
+    ),
+    'text': (
+        'body': #475569,
+        '1': #64748B,
+        '2': #475569,
+        '3': #94A3B8,
+        '4': #64748B,
+        '5': #64748B,
+        '6': #94A3B8,
+    ),
+    'theme': (
+        'primary': #0E7490,
+        'secondary': #BE123C,
+        'brown': #0E7490,
+        'green': #14B8A6,
+    ),
+    'footer': (
+        'grey-1': #134E4A
+    ),
+    'border': (
+        'primary': #E2E8F0,
+        'secondary': #ECFEFF,
+        '3': #E2E8F0,
+        '4': #E2E8F0,
+    )
+);
+
+$white: #FFFFFF;
+$black: #0C4A6E;
+$theme-primary: #0E7490;
+$border-primary: #E2E8F0;

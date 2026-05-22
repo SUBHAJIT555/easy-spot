@@ -1,0 +1,42 @@
+// Site design tokens — values come from ThemeProvider (--site-*) with SCSS fallbacks.
+
+:root {
+  --site-color-primary: var(--tp-theme-primary, #0f172a);
+  --site-color-secondary: var(--tp-theme-secondary, #0ea5e9);
+  --site-color-accent: #6366f1;
+  --site-color-heading: var(--tp-heading-primary, #0f172a);
+  --site-color-text-body: var(--tp-text-body, #475569);
+  --site-color-text-muted: #94a3b8;
+  --site-color-border: var(--tp-border-primary, #e2e8f0);
+  --site-color-surface: #ffffff;
+  --site-color-surface-muted: var(--tp-grey-1, #f8fafc);
+  --site-color-error: #ef4444;
+  --site-color-success: #10b981;
+
+  --site-font-body: var(--tp-ff-body);
+  --site-font-heading: var(--tp-ff-heading);
+
+  --site-space-section-y: clamp(4rem, 8vw, 6rem);
+  --site-space-section-y-sm: clamp(2.5rem, 5vw, 4rem);
+  --site-space-container: 80rem;
+  --site-space-gutter: clamp(1rem, 4vw, 2rem);
+
+  --site-radius-sm: 0.5rem;
+  --site-radius-md: 0.75rem;
+  --site-radius-lg: 1rem;
+  --site-radius-xl: 1.25rem;
+
+  --site-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --site-shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
+  --site-shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --site-shadow-focus: 0 0 0 3px rgba(14, 165, 233, 0.2);
+
+  --site-motion-duration-fast: 150ms;
+  --site-motion-duration: 280ms;
+  --site-motion-duration-slow: 480ms;
+  --site-motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --site-motion-ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  --site-btn-radius: var(--site-radius-md);
+  --site-card-radius: var(--site-radius-lg);
+}

@@ -1,0 +1,92 @@
+// Easy Spot — visible brand skin (applies when data-theme="easy-spot")
+
+[data-theme="easy-spot"] {
+  // —— Hero (editorial) ——
+  .es-hero--editorial .es-hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.45) 0%,
+      rgba(15, 23, 42, 0.2) 45%,
+      rgba(15, 23, 42, 0.75) 100%
+    );
+  }
+
+  // —— Header ——
+  .tp-header-area.tp-header-transparent,
+  .tp-header-area.tp-header-solid,
+  .tp-header-area.header-sticky {
+    border-bottom: 1px solid rgba(14, 165, 233, 0.12);
+  }
+
+  .tp-header-area.header-sticky {
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06) !important;
+  }
+
+  .main-menu.menu-style-3 > nav > ul > li:hover > a {
+    color: var(--site-color-secondary) !important;
+  }
+
+  .tp-header-action-badge {
+    background: linear-gradient(135deg, #0ea5e9, #6366f1) !important;
+  }
+
+  // —— Footer ——
+  .scs-footer {
+    background: linear-gradient(180deg, #0f172a 0%, #020617 100%) !important;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #0ea5e9, #6366f1) 1;
+  }
+
+  .scs-footer__phone:hover {
+    color: #38bdf8 !important;
+  }
+
+  .scs-footer__link:hover,
+  .scs-footer__legal a:hover {
+    color: #38bdf8 !important;
+  }
+
+  .scs-footer__submit {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+    border-color: #0284c7 !important;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%) !important;
+    }
+  }
+
+  // —— Sections ——
+  .scs-popular,
+  .es-features {
+    background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+  }
+
+  .scs-popular__eyebrow-mark,
+  .es-features__eyebrow-mark {
+    background: var(--site-color-secondary);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+  }
+
+  // —— Legacy product cards ——
+  .tp-btn,
+  .tp-btn-2 {
+    background-color: var(--site-color-primary) !important;
+    border-color: var(--site-color-primary) !important;
+
+    &:hover {
+      background-color: var(--site-color-secondary) !important;
+      border-color: var(--site-color-secondary) !important;
+    }
+  }
+
+  .tp-product-item:hover,
+  .tp-product-item-2:hover,
+  .tp-product-item-3:hover {
+    box-shadow: 0 12px 28px rgba(14, 165, 233, 0.15) !important;
+  }
+
+  .tp-section-title::after,
+  .tp-section-title-2::after {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+  }
+}

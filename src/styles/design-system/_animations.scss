@@ -1,0 +1,172 @@
+// Premium motion utilities — CSS-first for performance; pairs with MotionReveal / useInView.
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .site-animate-fade,
+  .site-animate-fade-up,
+  .site-animate-fade-down,
+  .site-animate-scale,
+  .site-animate-slide-left,
+  .site-animate-slide-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.site-animate-fade,
+.site-animate-fade-up,
+.site-animate-fade-down,
+.site-animate-scale,
+.site-animate-slide-left,
+.site-animate-slide-right {
+  will-change: opacity, transform;
+}
+
+.site-animate-fade {
+  opacity: 0;
+  transition: opacity var(--site-motion-duration-slow) var(--site-motion-ease-out);
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.site-animate-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--site-motion-duration-slow) var(--site-motion-ease-out),
+    transform var(--site-motion-duration-slow) var(--site-motion-ease-out);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-animate-fade-down {
+  opacity: 0;
+  transform: translateY(-16px);
+  transition:
+    opacity var(--site-motion-duration-slow) var(--site-motion-ease-out),
+    transform var(--site-motion-duration-slow) var(--site-motion-ease-out);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-animate-scale {
+  opacity: 0;
+  transform: scale(0.97);
+  transition:
+    opacity var(--site-motion-duration-slow) var(--site-motion-ease-out),
+    transform var(--site-motion-duration-slow) var(--site-motion-ease-out);
+
+  &.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.site-animate-slide-left {
+  opacity: 0;
+  transform: translateX(24px);
+  transition:
+    opacity var(--site-motion-duration-slow) var(--site-motion-ease-out),
+    transform var(--site-motion-duration-slow) var(--site-motion-ease-out);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.site-animate-slide-right {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition:
+    opacity var(--site-motion-duration-slow) var(--site-motion-ease-out),
+    transform var(--site-motion-duration-slow) var(--site-motion-ease-out);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Stagger children when parent becomes visible
+.site-stagger-children > * {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--site-motion-duration) var(--site-motion-ease-out),
+    transform var(--site-motion-duration) var(--site-motion-ease-out);
+}
+
+.site-stagger-children.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@for $i from 1 through 12 {
+  .site-stagger-children.is-visible > *:nth-child(#{$i}) {
+    transition-delay: #{($i - 1) * 60}ms;
+  }
+}
+
+// Hover micro-interactions
+.site-hover-lift {
+  transition:
+    transform var(--site-motion-duration) var(--site-motion-ease),
+    box-shadow var(--site-motion-duration) var(--site-motion-ease);
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--site-shadow-md);
+    }
+  }
+}
+
+.site-hover-fade {
+  transition: opacity var(--site-motion-duration-fast) var(--site-motion-ease);
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.site-link-underline {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--site-motion-duration) var(--site-motion-ease-out);
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}

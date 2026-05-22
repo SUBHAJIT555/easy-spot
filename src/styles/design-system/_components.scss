@@ -1,0 +1,217 @@
+// Cross-brand UI patterns — uses --site-* tokens (customize per theme in JS/SCSS).
+
+body {
+  background-color: var(--site-color-surface);
+}
+
+// Section spacing utility
+.site-section {
+  padding-top: var(--site-space-section-y);
+  padding-bottom: var(--site-space-section-y);
+}
+
+.site-section--sm {
+  padding-top: var(--site-space-section-y-sm);
+  padding-bottom: var(--site-space-section-y-sm);
+}
+
+.site-container {
+  width: 100%;
+  max-width: var(--site-space-container);
+  margin-inline: auto;
+  padding-inline: var(--site-space-gutter);
+}
+
+// Redesigned .scs-* sections (brand-agnostic token layer)
+[class*="scs-"] {
+  [class*="__panel"],
+  [class*="__grid"]:not([class*="__marquee"]) {
+    border-color: var(--site-color-border) !important;
+    box-shadow: var(--site-shadow-sm) !important;
+    border-radius: var(--site-card-radius) !important;
+  }
+
+  [class*="__btn--primary"],
+  [class*="__submit"]:not([class*="footer"]) {
+    border: 1px solid var(--site-btn-primary-border, var(--site-color-primary)) !important;
+    background: var(--site-btn-primary-bg, var(--site-color-primary)) !important;
+    color: var(--site-btn-primary-color, #f8fafc) !important;
+    border-radius: var(--site-btn-radius) !important;
+    font-weight: var(--site-btn-font-weight, 600) !important;
+    box-shadow: var(--site-shadow-sm) !important;
+    transition:
+      background var(--site-motion-duration) var(--site-motion-ease),
+      border-color var(--site-motion-duration) var(--site-motion-ease),
+      transform var(--site-motion-duration-fast) var(--site-motion-ease),
+      box-shadow var(--site-motion-duration) var(--site-motion-ease);
+
+    &:hover:not(:disabled) {
+      background: var(--site-btn-primary-bg-hover, var(--site-color-primary)) !important;
+      transform: translateY(-1px);
+      box-shadow: var(--site-shadow-md) !important;
+    }
+  }
+
+  [class*="__btn--outline"],
+  [class*="__btn--ghost"] {
+    border: 1px solid var(--site-btn-ghost-border, var(--site-color-border)) !important;
+    background: var(--site-btn-ghost-bg, var(--site-color-surface)) !important;
+    color: var(--site-btn-ghost-color, #334155) !important;
+    border-radius: var(--site-btn-radius) !important;
+    transition:
+      background var(--site-motion-duration) var(--site-motion-ease),
+      border-color var(--site-motion-duration) var(--site-motion-ease);
+
+    &:hover:not(:disabled) {
+      background: var(--site-btn-ghost-bg-hover, var(--site-color-surface-muted)) !important;
+      border-color: var(--site-color-text-muted) !important;
+    }
+  }
+
+  [class*="__eyebrow"] {
+    border-color: var(--site-color-border) !important;
+    background: var(--site-color-surface-muted) !important;
+    color: var(--site-color-primary) !important;
+  }
+
+  [class*="__eyebrow-dot"] {
+    background: var(--site-color-secondary) !important;
+    box-shadow: 0 0 0 3px rgba(var(--site-color-secondaryRgb, 14, 165, 233), 0.2) !important;
+  }
+}
+
+// Legacy tp-* components
+.tp-btn-2,
+.tp-btn-blue {
+  border-radius: var(--site-btn-radius) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+  transition:
+    background var(--site-motion-duration) var(--site-motion-ease),
+    color var(--site-motion-duration) var(--site-motion-ease),
+    box-shadow var(--site-motion-duration) var(--site-motion-ease),
+    transform var(--site-motion-duration-fast) var(--site-motion-ease);
+}
+
+.tp-product-item,
+.tp-product-item-2,
+.tp-product-item-3 {
+  border-radius: var(--site-card-radius);
+  transition:
+    box-shadow var(--site-motion-duration) var(--site-motion-ease),
+    transform var(--site-motion-duration) var(--site-motion-ease);
+}
+
+.tp-product-item:hover,
+.tp-product-item-2:hover,
+.tp-product-item-3:hover {
+  box-shadow: var(--site-card-shadow-hover, var(--site-shadow-md));
+}
+
+// Navbar
+.tp-header-area.tp-header-solid,
+.tp-header-area.tp-header-sticky.header-sticky {
+  background-color: var(--site-nav-background-sticky, rgba(255, 255, 255, 0.98)) !important;
+  backdrop-filter: blur(var(--site-nav-blur, 12px));
+  box-shadow: 0 1px 0 var(--site-nav-border, var(--site-color-border)) !important;
+  transition:
+    background-color var(--site-motion-duration) var(--site-motion-ease),
+    box-shadow var(--site-motion-duration) var(--site-motion-ease);
+}
+
+.tp-header-bottom-3 {
+  border-bottom: 1px solid var(--site-nav-border, var(--site-color-border)) !important;
+}
+
+.tp-header-area.tp-header-style-transparent-white.tp-header-transparent {
+  & .logo .logo-light {
+    display: none !important;
+  }
+
+  & .logo .logo-dark {
+    display: block !important;
+  }
+
+  & .main-menu.menu-style-3 > nav > ul > li > a {
+    color: var(--site-nav-link-color, var(--site-color-heading)) !important;
+    transition: color var(--site-motion-duration-fast) var(--site-motion-ease);
+  }
+
+  & .main-menu.menu-style-3 ul li.has-dropdown > a::after {
+    color: var(--site-color-text-muted) !important;
+  }
+
+  & .main-menu.menu-style-3 > nav > ul > li:hover > a,
+  & .main-menu.menu-style-3 ul li.has-dropdown:hover > a::after {
+    color: var(--site-nav-link-hover, var(--site-color-secondary)) !important;
+  }
+
+  & .tp-header-action-btn {
+    color: var(--site-nav-link-color, var(--site-color-heading)) !important;
+    transition: color var(--site-motion-duration-fast) var(--site-motion-ease);
+
+    &:hover {
+      color: var(--site-nav-link-hover, var(--site-color-secondary)) !important;
+    }
+  }
+
+  & .tp-header-action-badge {
+    background-color: var(--site-color-primary) !important;
+    color: #fff !important;
+    border: 0 !important;
+  }
+
+  & .tp-header-bottom-3 {
+    border-bottom-color: var(--site-nav-border, var(--site-color-border)) !important;
+  }
+
+  & .tp-menu-line {
+    background-color: var(--site-color-secondary) !important;
+  }
+}
+
+// Typography
+.tp-section-title,
+.tp-section-title-2 {
+  color: var(--site-color-heading);
+  letter-spacing: -0.02em;
+}
+
+.tp-product-price,
+.tp-product-price-2 .new-price {
+  color: var(--site-color-heading);
+  font-weight: 600;
+}
+
+.tp-product-badge,
+.tp-product-tag {
+  border-radius: var(--site-radius-sm);
+}
+
+// Footer token hook (component SCSS can use these)
+.scs-footer,
+[class*="scs-footer"] {
+  --footer-bg: var(--site-footer-background, var(--site-color-primary));
+  --footer-text: var(--site-footer-text, #f8fafc);
+  --footer-text-muted: var(--site-footer-text-muted, #94a3b8);
+}
+
+// Form inputs
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+  border-radius: var(--site-radius-md) !important;
+  border-color: var(--site-color-border) !important;
+  transition:
+    border-color var(--site-motion-duration-fast) var(--site-motion-ease),
+    box-shadow var(--site-motion-duration-fast) var(--site-motion-ease);
+
+  &:focus {
+    border-color: var(--site-color-primary) !important;
+    box-shadow: var(--site-shadow-focus) !important;
+  }
+}

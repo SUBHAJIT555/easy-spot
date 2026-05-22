@@ -1,0 +1,99 @@
+// Quick Pick Market — SCSS theme (keep in sync with src/theme/sites/quick-pick-market.js)
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+
+$font-family: (
+    'ff': (
+        'body': "var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        'heading': "var(--font-geist-sans), var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        'p': "var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        'jost': "var(--font-inter), sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+        'roboto': "var(--font-inter), sans-serif",
+        'oregano': "var(--font-geist-sans), sans-serif",
+        'charm': "var(--font-geist-sans), sans-serif",
+    )
+);
+
+$font-size: (
+    'fz': (
+        'body': 15px,
+        'p': 15px,
+    )
+);
+
+$colors: (
+    'common': (
+        'white': #FFFFFF,
+        'black-solid': #09090B,
+        'black': #18181B,
+    ),
+    'yellow': (
+        '1': #EAB308,
+        '2': #FEF9C3,
+        '3': #CA8A04,
+    ),
+    'pink': (
+        '1': #16A34A,
+        '2': #15803D,
+        '3': #22C55E,
+        '4': #86EFAC,
+    ),
+    'green': (
+        'dark': #14532D,
+        '1': #22C55E,
+    ),
+    'khaki': (
+        '1': #A16207,
+    ),
+    'blue': (
+        '1': #18181B,
+    ),
+    'orange': (
+        '1': #16A34A,
+    ),
+    'heading': (
+        'primary': #18181B,
+        'secondary': #27272A,
+    ),
+    'grey': (
+        '1': #FAFAFA,
+        '2': #F4F4F5,
+        '3': #E4E4E7,
+        '4': #E4E4E7,
+        '5': #D4D4D8,
+        '6': #E4E4E7,
+        '7': #FAFAFA,
+        '8': #D4D4D8,
+        '9': #F4F4F5,
+    ),
+    'text': (
+        'body': #52525B,
+        '1': #71717A,
+        '2': #52525B,
+        '3': #A1A1AA,
+        '4': #71717A,
+        '5': #71717A,
+        '6': #A1A1AA,
+    ),
+    'theme': (
+        'primary': #18181B,
+        'secondary': #16A34A,
+        'brown': #18181B,
+        'green': #22C55E,
+    ),
+    'footer': (
+        'grey-1': #27272A
+    ),
+    'border': (
+        'primary': #E4E4E7,
+        'secondary': #F4F4F5,
+        '3': #E4E4E7,
+        '4': #E4E4E7,
+    )
+);
+
+$white: #FFFFFF;
+$black: #18181B;
+$theme-primary: #18181B;
+$border-primary: #E4E4E7;
