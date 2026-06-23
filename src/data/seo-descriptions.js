@@ -2,13 +2,15 @@
  * Page-specific meta descriptions for SEO.
  * Used with <SEO pageTitle="..." description={seoDescriptions.key} /> in pages.
  */
-const brand = "Easy Spot";
+import contactInfo, { siteInfo } from "./contact-info";
+
+const { companyName: brand } = siteInfo;
 
 export const seoDescriptions = {
   home: `${brand} — Electronics, stationery, garments and everyday essentials delivered across India.`,
   shop: `Shop at ${brand} for mobiles, gadgets, office supplies, fashion, jewellery and more.`,
   about: `About ${brand}. Your trusted marketplace for quality products and reliable delivery.`,
-  contact: `Contact ${brand}. Get in touch for orders, quotes and support.`,
+  contact: `Contact ${brand}. Get in touch for orders, quotes and support at ${contactInfo.email}.`,
   cart: `Your shopping cart at ${brand}. Review your items before checkout.`,
   checkout: `Secure checkout at ${brand}. Complete your order or request a quote.`,
   wishlist: `Your wishlist at ${brand}. Save favourite products for later.`,

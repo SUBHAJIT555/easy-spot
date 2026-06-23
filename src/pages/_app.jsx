@@ -16,6 +16,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   display: "swap",
   weight: ["500", "600", "700", "800"],
+  style: ["normal", "italic"],
 });
 
 const ProductModal = dynamic(

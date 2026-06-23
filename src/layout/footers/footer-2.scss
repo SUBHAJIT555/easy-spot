@@ -107,13 +107,7 @@
   display: inline-block;
   margin-bottom: 1.25rem;
   text-decoration: none;
-}
-
-.es-footer__logo img {
-  width: auto;
-  height: auto;
-  max-width: min(12rem, 100%);
-  filter: none;
+  color: inherit;
 }
 
 .es-footer__brand-text {

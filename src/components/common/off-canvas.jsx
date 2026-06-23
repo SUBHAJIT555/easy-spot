@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 // internal
 import { CloseTwo } from '@/svg';
-import logo from '@assets/img/logo/logo.svg';
+import EasySpotLogo from '@/components/brand/easy-spot-logo';
+import contactInfo from '@/data/contact-info';
 import contact_img from '@assets/img/icon/contact.png';
 import language_img from '@assets/img/icon/language-flag.png';
 import MobileCategory from '@/layout/headers/header-com/mobile-category';
@@ -37,7 +38,7 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
             <div className="offcanvas__top mb-70 d-flex justify-content-between align-items-center">
               <div className="offcanvas__logo logo">
                 <Link href="/">
-                  <Image src={logo} alt="logo" />
+                  <EasySpotLogo variant="dark" />
                 </Link>
               </div>
             </div>
@@ -64,7 +65,7 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
               </div>
               <div className="offcanvas__contact-content">
                 <h3 className="offcanvas__contact-title">
-                  <a href="tel:098-852-987">004524865</a>
+                  <a href={contactInfo.telLink}>{contactInfo.phone}</a>
                 </h3>
               </div>
             </div>

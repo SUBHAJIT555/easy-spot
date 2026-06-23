@@ -5,6 +5,7 @@ import { handleProductModal } from "@/redux/features/productModalSlice";
 import { add_cart_product } from "@/redux/features/cartSlice";
 import { add_to_wishlist } from "@/redux/features/wishlist-slice";
 import { notifyError } from "@/utils/toast";
+import { siteInfo } from "@/data/contact-info";
 
 function HeartIcon({ filled }) {
   return (
@@ -47,7 +48,7 @@ const ProductSliderItem = ({ product, suppressClickRef }) => {
       : null;
 
   const brandLabel =
-    brand?.name || category?.name || parent || "Easy Spot";
+    brand?.name || category?.name || parent || siteInfo.companyName;
   const outOfStock = status === "out-of-stock";
 
   const handleModalClick = useCallback(() => {

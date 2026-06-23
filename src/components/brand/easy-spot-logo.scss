@@ -1,0 +1,32 @@
+.es-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  line-height: 1;
+  font-family: var(--font-plus-jakarta), var(--site-font-heading, sans-serif);
+  text-decoration: none;
+  user-select: none;
+}
+
+.es-logo__easy {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.03em;
+}
+
+.es-logo__spot {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.02em;
+}
+
+.es-logo--light {
+  color: #fff;
+}
+
+.es-logo--dark {
+  color: #0f172a;
+}

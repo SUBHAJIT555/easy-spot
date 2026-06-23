@@ -22,8 +22,10 @@ set_exception_handler(function ($e) {
 // --- CORS ---
 $origin  = $_SERVER['HTTP_ORIGIN'] ?? '';
 $allowed = [
-    'https://supreme-cart.com',
-    'https://www.supreme-cart.com',
+    'https://easy-spot.com',
+    'https://www.easy-spot.com',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
 ];
 if ($origin && in_array($origin, $allowed, true)) {
     header("Access-Control-Allow-Origin: $origin");
@@ -148,14 +150,14 @@ $smtpPass = $_ENV['SMTP_PASS'];
 $smtpPort = $_ENV['SMTP_PORT'];
 $smtpSecure = $_ENV['SMTP_SECURE'];
 
-$toAddresses = [['aditya@baharnani.com', 'Aditya Baharnani']];
+$toAddresses = [['info@easy-spot.com', 'Easy Spot']];
 $fromEmail = $smtpUser;
-$fromName  = 'Snap Gears Website';
+$fromName  = 'Easy Spot';
 
 // --- Brand styling ---
-$brandName = 'Supreme Cart';
-$tagline   = 'Where Innovation Meets Excellence.';
-$brandColor = '#0a2540';
+$brandName = 'Easy Spot';
+$tagline   = 'Premium essentials, thoughtfully curated — delivered across India.';
+$brandColor = '#0F172A';
 $muted = '#6b7280';
 $bg = '#f9fafb';
 $cardBg = '#ffffff';

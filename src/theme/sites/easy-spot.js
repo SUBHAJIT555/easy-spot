@@ -6,6 +6,8 @@ module.exports = {
   id: "easy-spot",
   name: "Easy Spot",
   domain: "easy-spot.com",
+  email: "info@easy-spot.com",
+  tagline: "Premium essentials, thoughtfully curated — delivered across India.",
 
   colors: {
     primary: "#0F172A",

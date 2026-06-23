@@ -1,5 +1,5 @@
 /**
- * Smart Choice Store — hero & shop category list (single source of truth).
+ * Easy Spot — hero & shop category list (single source of truth).
  */
 import MobileAccessoriesHero from "@assets/images/HeroImages/MobileAccessoriesHero.webp";
 import SmartGadgetsHero from "@assets/images/HeroImages/SmartGadgetsHero.webp";

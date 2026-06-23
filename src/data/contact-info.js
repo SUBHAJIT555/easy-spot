@@ -6,6 +6,7 @@
 export const siteInfo = {
   companyName: 'Easy Spot',
   domain: 'easy-spot.com',
+  websiteUrl: 'https://easy-spot.com',
   tagline: 'Premium essentials, thoughtfully curated — delivered across India.',
 };
 

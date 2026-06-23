@@ -1,7 +1,7 @@
 import contactInfo from "./contact-info";
 
 /**
- * FAQ copy for Smart Choice Store — adjust here to update /faq in one place.
+ * FAQ copy for Easy Spot — adjust here to update /faq in one place.
  */
 export function getFaqItems() {
   const { companyName, email, phone } = contactInfo;

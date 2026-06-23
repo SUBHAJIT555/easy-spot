@@ -1,29 +1,33 @@
+import { siteInfo } from "./contact-info";
 
+const siteUrl = siteInfo.websiteUrl;
+
+/** Update links when Easy Spot social profiles are live. */
 const social_data = [
   {
-    id:1,
-    link:'https://www.facebook.com/hamed.y.hasan0',
-    icon:'fa-brands fa-facebook-f',
-    title:'Facebook'
+    id: 1,
+    link: siteUrl,
+    icon: "fa-brands fa-facebook-f",
+    title: `${siteInfo.companyName} on Facebook`,
   },
   {
-    id:2,
-    link:'https://twitter.com/HamedHasan75',
-    icon:'fa-brands fa-twitter',
-    title:'Twitter'
+    id: 2,
+    link: siteUrl,
+    icon: "fa-brands fa-twitter",
+    title: `${siteInfo.companyName} on X`,
   },
   {
-    id:3,
-    link:'nkedin.com/in/hamed-hasan/',
-    icon:'fa-brands fa-linkedin-in',
-    title:'Linkedin'
+    id: 3,
+    link: siteUrl,
+    icon: "fa-brands fa-linkedin-in",
+    title: `${siteInfo.companyName} on LinkedIn`,
   },
   {
-    id:4,
-    link:'https://vimeo.com/',
-    icon:'fa-brands fa-vimeo-v',
-    title:'Vimeo'
+    id: 4,
+    link: siteUrl,
+    icon: "fa-brands fa-instagram",
+    title: `${siteInfo.companyName} on Instagram`,
   },
-]
+];
 
 export default social_data;

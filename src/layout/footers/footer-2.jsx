@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import contactInfo, { siteInfo } from "@/data/contact-info";
-import logo from "@assets/img/logo/logo.svg";
+import EasySpotLogo from "@/components/brand/easy-spot-logo";
 import pay from "@assets/img/footer/footer-pay.png";
 import { submitToApi } from "@/lib/submit-api";
 import { notifyError, notifySuccess } from "@/utils/toast";
@@ -77,13 +77,7 @@ const FooterTwo = () => {
         <div className="es-footer__main">
           <div className="es-footer__brand">
             <Link href="/" className="es-footer__logo">
-              <Image
-                src={logo}
-                alt={siteInfo.companyName}
-                width={200}
-                height={52}
-                priority={false}
-              />
+              <EasySpotLogo variant="dark" />
             </Link>
             <p className="es-footer__brand-text">{siteInfo.tagline}</p>
             <p className="es-footer__brand-domain">{siteInfo.domain}</p>

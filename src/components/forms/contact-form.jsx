@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import ErrorMsg from "../common/error-msg";
 import { notifyError, notifySuccess } from "@/utils/toast";
 import { submitToApi } from "@/lib/submit-api";
-import { siteInfo } from "@/data/contact-info";
+import contactInfo, { siteInfo } from "@/data/contact-info";
 
 const schema = Yup.object().shape({
   name: Yup.string().required().label("Name"),
@@ -82,7 +82,7 @@ const ContactForm = () => {
             name="email"
             type="email"
             className="es-contact-form__input"
-            placeholder="you@example.com"
+            placeholder={contactInfo.email}
             autoComplete="email"
           />
           <ErrorMsg msg={errors.email?.message} />
