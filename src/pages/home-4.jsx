@@ -32,7 +32,6 @@ const HomeFour = () => {
       <ProductBanner />
       <NewArrivals />
       <ProductSmArea />
-      {/* <InstagramArea/> */}
       <CtaArea />
       <Footer />
     </Wrapper>

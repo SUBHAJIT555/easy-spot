@@ -1,4 +1,4 @@
-// Editorial minimal hero — Pexels bg + overlay
+// Editorial hero — local brand image + overlay
 
 .es-hero--editorial {
   position: relative;
@@ -19,7 +19,7 @@
 
 .es-hero__img {
   object-fit: cover;
-  object-position: center;
+  object-position: center 42%;
 }
 
 .es-hero__overlay {
@@ -45,6 +45,16 @@
   margin-inline: auto;
   padding: clamp(6.5rem, 12vw, 8rem) var(--site-space-gutter, clamp(1.25rem, 4vw, 2rem))
     clamp(2rem, 5vw, 3rem);
+}
+
+.es-hero__eyebrow {
+  margin: 0 0 clamp(0.75rem, 2vw, 1.25rem);
+  font-family: var(--site-font-heading, var(--tp-ff-heading));
+  font-size: clamp(0.8125rem, 1.4vw, 0.9375rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .es-hero__title {

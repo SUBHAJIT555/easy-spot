@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteInfo } from "@/data/contact-info";
-
-const HERO_BG =
-  "https://images.pexels.com/photos/31496295/pexels-photo-31496295.jpeg";
+import heroImage from "@assets/images/HeroImages/easy-spot-hero.webp";
 
 function ArrowUpRight() {
   return (
@@ -20,6 +18,9 @@ function ArrowUpRight() {
 }
 
 export default function TrueBasketHero() {
+  const { companyName, domain, tagline, hero } = siteInfo;
+  const titleLines = (hero?.headline || companyName).split(". ");
+
   return (
     <section
       className="es-hero es-hero--editorial"
@@ -27,7 +28,7 @@ export default function TrueBasketHero() {
     >
       <div className="es-hero__media" aria-hidden="true">
         <Image
-          src={HERO_BG}
+          src={heroImage}
           alt=""
           fill
           priority
@@ -38,26 +39,32 @@ export default function TrueBasketHero() {
       </div>
 
       <div className="es-hero__content">
+        {hero?.eyebrow && <p className="es-hero__eyebrow">{hero.eyebrow}</p>}
         <h1 id="es-hero-heading" className="es-hero__title">
-          Shop confidently.
-          <br />
-          Curated for you.
+          {titleLines.length > 1 ? (
+            <>
+              {titleLines[0]}.
+              <br />
+              {titleLines.slice(1).join(". ")}
+            </>
+          ) : (
+            hero?.headline || companyName
+          )}
         </h1>
 
         <div className="es-hero__bar">
           <div className="es-hero__aside">
-            <p className="es-hero__aside-title">Your everyday marketplace</p>
+            <p className="es-hero__aside-title">{companyName}</p>
             <p className="es-hero__aside-text">
-              Quality products, simple checkout, and reliable delivery — everything
-              you need in one place.
+              {hero?.subtitle || tagline}
             </p>
-            <p className="es-hero__aside-meta">Free shipping on orders over ₹570</p>
+            <p className="es-hero__aside-meta">
+              Free shipping on orders over ₹570 · {domain}
+            </p>
           </div>
 
           <div className="es-hero__cta">
-            <p className="es-hero__cta-text">
-              {siteInfo.tagline}
-            </p>
+            <p className="es-hero__cta-text">{tagline}</p>
             <Link href="/shop" className="es-hero__shop-btn">
               <span>Shop Now</span>
               <span className="es-hero__shop-btn-icon">

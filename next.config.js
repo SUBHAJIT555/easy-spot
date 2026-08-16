@@ -26,7 +26,7 @@ const nextConfig = {
       beforeFiles: [
         {
           source: '/api/submit.php',
-          destination: 'http://localhost/ecom/api/submit.php',
+          destination: 'http://localhost/easy-spot/api/submit.php',
         },
       ],
       afterFiles: [],

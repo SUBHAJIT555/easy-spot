@@ -22,7 +22,7 @@ export function getFaqItems() {
       id: 3,
       question: "Where do you deliver and how long does delivery take?",
       answer:
-        "We focus on Mumbai and surrounding areas. Exact delivery days, time slots, and any delivery charges depend on your location and order size. We include those details in our quote response once we have your address.",
+        "We deliver across India. Exact delivery days, time slots, and any delivery charges depend on your location and order size. We include those details in our quote response once we have your address.",
     },
     {
       id: 4,

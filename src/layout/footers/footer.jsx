@@ -4,7 +4,6 @@ import Link from 'next/link';
 // internal
 import EasySpotLogo from '@/components/brand/easy-spot-logo';
 import pay from '@assets/img/footer/footer-pay.png';
-import social_data from '@/data/social-data';
 import contactInfo, { siteInfo } from '@/data/contact-info';
 import { Email, Location } from '@/svg';
 
@@ -25,12 +24,9 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                       </Link>
                     </div>
                     <p className="tp-footer-desc">{siteInfo.tagline}</p>
-                    <div className="tp-footer-social">
-                      {social_data.map(s => <a href={s.link} key={s.id} target="_blank">
-                        <i className={s.icon}></i>
-                      </a>
-                      )}
-                    </div>
+                    <p className="tp-footer-desc mb-0">
+                      <a href={contactInfo.mailtoLink}>{contactInfo.email}</a>
+                    </p>
                   </div>
                 </div>
               </div>

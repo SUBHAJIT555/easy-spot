@@ -12,7 +12,6 @@ import ProductAreaTwo from "@/components/products/beauty/product-area-2";
 import TrendingSpecialPrd from "@/components/products/beauty/trending-special-prd";
 import BeautyTestimonial from "@/components/testimonial/beauty-testimonial";
 import FeatureAreaTwo from "@/components/features/feature-area-2";
-import InstagramAreaThree from "@/components/instagram/instagram-area-3";
 import Footer from "@/layout/footers/footer";
 
 const HomeThree = () => {
@@ -29,7 +28,6 @@ const HomeThree = () => {
       <TrendingSpecialPrd />
       <BeautyTestimonial />
       <FeatureAreaTwo />
-      <InstagramAreaThree />
       <Footer style_3={true} />
     </Wrapper>
   );

@@ -12,7 +12,6 @@ import TrendingProducts from "@/components/products/fashion/trending-products";
 import BestSellerProducts from "@/components/products/fashion/best-seller-products";
 import FashionTestimonial from "@/components/testimonial/fashion-testimonial";
 import FeatureAreaTwo from "@/components/features/feature-area-2";
-import InstagramAreaTwo from "@/components/instagram/instagram-area-2";
 import Footer from "@/layout/footers/footer";
 
 const HomeTwo = () => {
@@ -30,7 +29,6 @@ const HomeTwo = () => {
       <FashionTestimonial />
 
       <FeatureAreaTwo />
-      <InstagramAreaTwo />
       <Footer style_2={true} />
     </Wrapper>
   );
